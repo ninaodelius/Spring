@@ -6,9 +6,10 @@ public class SpringApp {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 
-        Educator theEducator = context.getBean("myEducator", Educator.class);
+        Educator theEducator = context.getBean("myJavaScriptEducator", Educator.class);
 
         System.out.println(theEducator.getClassOfTheDay());
+        System.out.println(theEducator.getDailyWisdom());
 
         context.close();
     }
